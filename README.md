@@ -65,7 +65,9 @@ admissions-excel-updater/
 │
 ├── admissions_app.py
 ├── requirements.txt
+├── admissions_app.png
 ├── README.md
+├── LICENSE
 ├── .gitignore
 └── Run Admissions App.command  # Optional Mac launcher
 ```
