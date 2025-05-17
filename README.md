@@ -61,7 +61,7 @@ The app processes your files and provides a download link for the updated Excel 
 ## File Structure
 
 ```
-admissions-excel-updater/
+admissions_excel_file_updater/
 │
 ├── admissions_app.py
 ├── requirements.txt
