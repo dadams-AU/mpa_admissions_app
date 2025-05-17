@@ -1,0 +1,144 @@
+Absolutely! Here’s a ready-to-go **GitHub repo structure** with a polished README, a sample `.gitignore`, and a brief `requirements.txt`. This is designed for a non-technical user but still looks professional and clear for academic/professional context.
+
+---
+
+## **1. README.md**
+
+````markdown
+# Admissions Excel File Updater
+
+A simple Streamlit app to help you update and synchronize MPA applicant data.  
+Upload your latest university CSV and your master Excel sheet, and this app will merge changes, exclude certain applicants, and provide a ready-to-download updated Excel file.  
+**No coding required!**
+
+## Features
+
+- Simple drag-and-drop interface
+- Merges new admissions data with your master Excel file
+- Excludes applicants with `'37POSCPMA'` in `acad_plan`
+- Updates changed records and adds new applicants
+- Runs on Mac or Windows (locally, no data leaves your computer)
+
+## How to Use
+
+1. **Install Prerequisites**
+
+   Make sure Python 3.8+ is installed (download from [python.org](https://www.python.org/downloads/)).
+   
+   Open Terminal and run:
+   ```bash
+   pip install -r requirements.txt
+````
+
+2. **Start the App**
+
+   From Terminal, run:
+
+   ```bash
+   streamlit run admissions_app.py
+   ```
+
+   This will open a browser window with the app.
+
+3. **Upload Your Files**
+
+   * **University CSV file:** The latest admissions export
+   * **Current Excel file:** Your master applicant sheet
+
+   The app will process and give you a download link for the updated Excel file.
+
+## Tips
+
+* If the Excel file does not exist yet, create it with at least an `id` column.
+* The columns in your files should include an `id` field to match records.
+* The output file is fully compatible with Excel and can be shared as usual.
+
+## For Developers
+
+To create a double-clickable launcher on Mac, see instructions in the README or the included `Run Admissions App.command` script.
+
+---
+
+## File Structure
+
+```
+admissions-excel-updater/
+│
+├── admissions_app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── Run Admissions App.command  # Optional Mac double-click launcher
+```
+
+---
+
+## License
+
+MIT License (see LICENSE).
+
+```
+
+---
+
+## **2. requirements.txt**
+
+```
+
+streamlit
+pandas
+openpyxl
+
+```
+
+---
+
+## **3. .gitignore**
+
+```
+
+**pycache**/
+\*.pyc
+.DS\_Store
+\*.xlsx
+\*.csv
+\*.xls
+.env
+
+````
+
+---
+
+## **4. LICENSE (MIT License)**
+*Optional but professional; here’s the classic MIT License text:*
+
+```text
+MIT License
+
+Copyright (c) 2025 David P. Adams
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+[MIT license continues…]
+````
+
+*(Full text available online, just copy/paste it in a `LICENSE` file if needed.)*
+
+---
+
+## **5. Run Admissions App.command**
+
+*Provided above. Mark executable on Mac with `chmod +x`.*
+
+---
+
+## **Copy & Paste Files**
+
+1. Place the files as listed above in your GitHub repository folder.
+2. Copy your latest `admissions_app.py` in.
+3. Push to GitHub as normal.
