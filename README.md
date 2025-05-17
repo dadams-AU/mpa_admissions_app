@@ -37,6 +37,10 @@ streamlit run admissions_app.py
 
 A browser window will open with the app.
 
+## App Screenshot
+
+![Admissions Excel File Updater](admissions_app.png)
+
 ### 3. Upload Your Files
 
 - **University CSV file:** Latest admissions export
