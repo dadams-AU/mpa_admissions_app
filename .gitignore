@@ -1,0 +1,48 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpoints (if you ever use notebooks)
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Virtual environment folders
+env/
+venv/
+.venv/
+
+# Environment/config files (optional)
+.env
+
+# Application/output files
+*.xlsx
+*.xls
+*.csv
+
+# Streamlit logs and cache (optional)
+.streamlit/
+logs/
+.cache/
+
+# User-specific files
+*.swp
+*.bak
+
+# Your optional Mac launcher (if you don't want it in git)
+# Run Admissions App.command
+
+# IDE/workspace files
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignore the admissions_app.png screenshot if it’s large or private
+#admissions_app.png
