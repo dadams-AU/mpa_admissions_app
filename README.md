@@ -1,18 +1,19 @@
 # Admissions Excel File Updater
 
-A simple Streamlit app to update and synchronize MPA applicant data.  
-Upload your latest university CSV and your master Excel sheet—this app merges changes, excludes certain applicants, and provides a ready-to-download updated Excel file.  
-**No coding required!**
+A Streamlit app to keep the MPA applicant tracking spreadsheet in sync with the university admissions system export. Upload your latest university CSV and your master Excel sheet — the app shows you exactly what changed before you download.
+
+**No coding required. No data leaves your computer.**
 
 ---
 
 ## Features
 
-- Drag-and-drop interface
-- Merges new admissions data with your master Excel file
-- Excludes applicants with `'37POSCPMA'` in `acad_plan`
-- Updates changed records and adds new applicants
-- Runs locally on Mac or Windows (no data leaves your computer)
+- Drag-and-drop file upload
+- Shows a preview of all status changes and new applicants before download
+- Excludes `37POSCPMA` (non-MPA) records automatically
+- Fixes only `prog_actn` on existing records — your hand-entered notes are untouched
+- Output filename includes today's date (e.g. `Fall 2026 MPA Applicants Unified 06112026.xlsx`)
+- Runs locally on Mac or Windows
 
 ---
 
@@ -20,75 +21,62 @@ Upload your latest university CSV and your master Excel sheet—this app merges 
 
 ### 1. Install Prerequisites
 
-- Ensure Python 3.8+ is installed ([Download Python](https://www.python.org/downloads/))
-- Install dependencies:
+Python 3.8+ is required. ([Download Python](https://www.python.org/downloads/))
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ### 2. Launch the App
-
-Run in Terminal:
 
 ```bash
 streamlit run admissions_app.py
 ```
 
-A browser window will open with the app.
+A browser window will open automatically.
 
-## App Screenshot
-
-![Admissions Excel File Updater](admissions_app.png)
+**Mac shortcut:** Double-click `Run Admissions App.command` (first run: `chmod +x "Run Admissions App.command"`).
 
 ### 3. Upload Your Files
 
-- **University CSV file:** Latest admissions export
-- **Current Excel file:** Your master applicant sheet
+| File | What it is |
+|---|---|
+| **University CSV** | Latest export from the university admissions system (e.g. `FUL_SR_MQ_GRAD_DEPT_RPT.csv`) |
+| **Current Excel file** | Your master MPA applicant tracking sheet (`.xlsx`) |
 
-The app processes your files and provides a download link for the updated Excel file.
+### 4. Review and Download
+
+The app displays:
+- **Records updated** — existing applicants whose `prog_actn` changed
+- **New applicants added** — IDs in the CSV not yet in your Excel
+- **Excluded** — records filtered out due to `37POSCPMA` acad_plan
+
+Review the change tables, then click **Download** to get the updated file.
 
 ---
 
-## Tips
+## Requirements
 
-- If the Excel file does not exist yet, create it with at least an `id` column.
-- Both files should include an `id` field to match records.
-- The output file is fully compatible with Excel.
+- Both files must have an `id` column
+- The University CSV must have `prog_actn` and `acad_plan` columns
+- The Excel file must be `.xlsx` format
 
 ---
 
 ## File Structure
 
 ```
-admissions_excel_file_updater/
-│
+admissions_excell_file_updater/
 ├── admissions_app.py
 ├── requirements.txt
-├── admissions_app.png
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-└── Run Admissions App.command  # Optional Mac launcher
+└── Run Admissions App.command   # Mac double-click launcher
 ```
-
----
-
-## For Developers
-
-- To create a double-clickable launcher on Mac, use the included `Run Admissions App.command` script (make it executable with `chmod +x`).
 
 ---
 
 ## License
 
-MIT License (see [LICENSE](LICENSE) for details)
-
----
-
-## Quick Setup Checklist
-
-1. Place all files as listed above in your project folder.
-2. Add your latest `admissions_app.py`.
-3. Push to GitHub as usual.
-
+MIT License — see [LICENSE](LICENSE) for details.
